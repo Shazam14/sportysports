@@ -25,7 +25,7 @@ export default function Home() {
           <p className="max-w-md text-lg text-neutral-300">
             Live skill ratings &amp; leaderboards for Filipino racquet sports —{" "}
             <span className="text-neutral-100">
-              pickleball, table tennis, badminton.
+              pickleball, badminton, ping pong.
             </span>{" "}
             Log a match, both players confirm, and watch your number climb.
           </p>
@@ -53,12 +53,24 @@ export default function Home() {
 
         {/* Right: mock leaderboard */}
         <section className="rounded-2xl border border-neutral-800 bg-neutral-900/60 p-5 shadow-2xl">
-          <div className="mb-4 flex items-center justify-between">
+          <div className="mb-3 flex items-center justify-between">
             <p className="text-sm font-semibold text-neutral-400">
               Sino&apos;ng pamato? 🇵🇭
             </p>
             <span className="rounded-md bg-neutral-800 px-2 py-1 text-xs text-neutral-400">
-              Pickleball · National
+              National
+            </span>
+          </div>
+
+          <div className="mb-4 flex flex-wrap gap-2">
+            <span className="rounded-full bg-lime-400 px-3 py-1 text-xs font-semibold text-neutral-950">
+              Pickleball
+            </span>
+            <span className="rounded-full border border-neutral-700 px-3 py-1 text-xs font-medium text-neutral-400">
+              Badminton <span className="text-neutral-600">· soon</span>
+            </span>
+            <span className="rounded-full border border-neutral-700 px-3 py-1 text-xs font-medium text-neutral-400">
+              Ping Pong <span className="text-neutral-600">· soon</span>
             </span>
           </div>
 
