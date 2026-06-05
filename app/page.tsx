@@ -1,4 +1,5 @@
 import LeaderboardPreview from "./leaderboard-preview";
+import RatingDemo from "./rating-demo";
 
 export default function Home() {
   return (
@@ -48,6 +49,9 @@ export default function Home() {
         {/* Right: interactive multi-sport leaderboard */}
         <LeaderboardPreview />
       </div>
+
+      {/* Interactive "why your rating moves" demo */}
+      <RatingDemo />
 
       <footer className="mt-16 text-xs text-neutral-600">
         Sports Ka Ba? · a SKMC project · built for the Pinoy racquet community
