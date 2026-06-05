@@ -1,9 +1,9 @@
 const LEADERBOARD = [
-  { rank: 1, name: "J. Cruz", venue: "SideOut Cebu", rating: 1842, trend: "+18" },
-  { rank: 2, name: "M. Santos", venue: "SideOut Cebu", rating: 1798, trend: "+7" },
-  { rank: 3, name: "You", venue: "SideOut Cebu", rating: 1771, trend: "+24", you: true },
-  { rank: 4, name: "R. Dela Peña", venue: "SideOut Cebu", rating: 1740, trend: "-12" },
-  { rank: 5, name: "A. Lim", venue: "SideOut Cebu", rating: 1702, trend: "+3" },
+  { rank: 1, name: "J. Cruz", venue: "Taguig", rating: 1842, trend: "+18" },
+  { rank: 2, name: "M. Santos", venue: "Cebu", rating: 1798, trend: "+7" },
+  { rank: 3, name: "You", venue: "Mandaluyong", rating: 1771, trend: "+24", you: true },
+  { rank: 4, name: "R. Dela Peña", venue: "Manila", rating: 1740, trend: "-12" },
+  { rank: 5, name: "A. Lim", venue: "Siargao", rating: 1702, trend: "+3" },
 ];
 
 export default function Home() {
@@ -55,10 +55,10 @@ export default function Home() {
         <section className="rounded-2xl border border-neutral-800 bg-neutral-900/60 p-5 shadow-2xl">
           <div className="mb-4 flex items-center justify-between">
             <p className="text-sm font-semibold text-neutral-400">
-              Sino&apos;ng pamato sa Cebu?
+              Sino&apos;ng pamato? 🇵🇭
             </p>
             <span className="rounded-md bg-neutral-800 px-2 py-1 text-xs text-neutral-400">
-              Pickleball
+              Pickleball · National
             </span>
           </div>
 
