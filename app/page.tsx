@@ -1,10 +1,4 @@
-const LEADERBOARD = [
-  { rank: 1, name: "J. Cruz", venue: "Taguig", rating: 1842, trend: "+18" },
-  { rank: 2, name: "M. Santos", venue: "Cebu", rating: 1798, trend: "+7" },
-  { rank: 3, name: "You", venue: "Mandaluyong", rating: 1771, trend: "+24", you: true },
-  { rank: 4, name: "R. Dela Peña", venue: "Manila", rating: 1740, trend: "-12" },
-  { rank: 5, name: "A. Lim", venue: "Siargao", rating: 1702, trend: "+3" },
-];
+import LeaderboardPreview from "./leaderboard-preview";
 
 export default function Home() {
   return (
@@ -51,68 +45,8 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Right: mock leaderboard */}
-        <section className="rounded-2xl border border-neutral-800 bg-neutral-900/60 p-5 shadow-2xl">
-          <div className="mb-3 flex items-center justify-between">
-            <p className="text-sm font-semibold text-neutral-400">
-              Sino&apos;ng pamato? 🇵🇭
-            </p>
-            <span className="rounded-md bg-neutral-800 px-2 py-1 text-xs text-neutral-400">
-              National
-            </span>
-          </div>
-
-          <div className="mb-4 flex flex-wrap gap-2">
-            <span className="rounded-full bg-lime-400 px-3 py-1 text-xs font-semibold text-neutral-950">
-              Pickleball
-            </span>
-            <span className="rounded-full border border-neutral-700 px-3 py-1 text-xs font-medium text-neutral-400">
-              Badminton <span className="text-neutral-600">· soon</span>
-            </span>
-            <span className="rounded-full border border-neutral-700 px-3 py-1 text-xs font-medium text-neutral-400">
-              Ping Pong <span className="text-neutral-600">· soon</span>
-            </span>
-          </div>
-
-          <ul className="flex flex-col gap-1">
-            {LEADERBOARD.map((p) => (
-              <li
-                key={p.rank}
-                className={`flex items-center gap-3 rounded-lg px-3 py-2.5 ${
-                  p.you ? "bg-lime-400/10 ring-1 ring-lime-400/40" : ""
-                }`}
-              >
-                <span className="w-5 text-center text-sm font-bold text-neutral-500">
-                  {p.rank}
-                </span>
-                <div className="flex-1">
-                  <p
-                    className={`text-sm font-semibold ${
-                      p.you ? "text-lime-300" : "text-neutral-100"
-                    }`}
-                  >
-                    {p.name}
-                  </p>
-                  <p className="text-xs text-neutral-500">{p.venue}</p>
-                </div>
-                <span className="font-mono text-sm font-bold tabular-nums">
-                  {p.rating}
-                </span>
-                <span
-                  className={`w-10 text-right font-mono text-xs ${
-                    p.trend.startsWith("-") ? "text-red-400" : "text-lime-400"
-                  }`}
-                >
-                  {p.trend}
-                </span>
-              </li>
-            ))}
-          </ul>
-
-          <p className="mt-4 text-center text-xs text-neutral-600">
-            Sample leaderboard · ratings update after every confirmed match
-          </p>
-        </section>
+        {/* Right: interactive multi-sport leaderboard */}
+        <LeaderboardPreview />
       </div>
 
       <footer className="mt-16 text-xs text-neutral-600">
