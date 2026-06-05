@@ -38,18 +38,32 @@ const DATA: Record<Sport, Row[]> = {
   ],
 };
 
-export default function LeaderboardPreview() {
+type Lang = "en" | "tl";
+
+const COPY = {
+  en: {
+    heading: "Who's the best? 🇵🇭",
+    scope: "National",
+    caption: "Sample leaderboard · ratings update after every confirmed match",
+  },
+  tl: {
+    heading: "Sino'ng pamato? 🇵🇭",
+    scope: "Pambansa",
+    caption: "Sample leaderboard · nag-a-update pagkatapos ng bawat confirmed na laro",
+  },
+};
+
+export default function LeaderboardPreview({ lang }: { lang: Lang }) {
   const [sport, setSport] = useState<Sport>("Pickleball");
   const rows = DATA[sport];
+  const c = COPY[lang];
 
   return (
     <section className="rounded-2xl border border-neutral-800 bg-neutral-900/60 p-5 shadow-2xl">
       <div className="mb-3 flex items-center justify-between">
-        <p className="text-sm font-semibold text-neutral-400">
-          Sino&apos;ng pamato? 🇵🇭
-        </p>
+        <p className="text-sm font-semibold text-neutral-400">{c.heading}</p>
         <span className="rounded-md bg-neutral-800 px-2 py-1 text-xs text-neutral-400">
-          National
+          {c.scope}
         </span>
       </div>
 
@@ -105,9 +119,7 @@ export default function LeaderboardPreview() {
         ))}
       </ul>
 
-      <p className="mt-4 text-center text-xs text-neutral-600">
-        Sample leaderboard · ratings update after every confirmed match
-      </p>
+      <p className="mt-4 text-center text-xs text-neutral-600">{c.caption}</p>
     </section>
   );
 }
